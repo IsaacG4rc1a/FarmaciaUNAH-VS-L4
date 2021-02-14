@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Farmacia.BL
 {
-    public class Class1
-    {
-
-    }
+	public class Presentation
+	{
+		public int presentId { get; set; }
+		public string description { get; set; }
+	}
 }
