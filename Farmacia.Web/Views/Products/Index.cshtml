@@ -9,4 +9,38 @@
 {
 	<p>@prod.description</p>
 }
+<table>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@item.productId
+			</td>
+			<td>
+				@item.description
+			</td>
+			<td>
+				@item.purchasePrice
+			</td>
+			<td>
+				@item.salePrice
+			</td>
+			<td>
+				@item.stock
+			</td>
+			<td>
+				@item.expirationDate		
+			</td>
+			@*<td>
+				@item.Categoria.description
+			</td>*@
+			@*<td>
+				@item.Proveedor.providerName
+			</td>*@
+			@*<td>
+				@item.Presentacion.description
+			</td>*@
+		</tr>
+	}
+</table>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Farmacia.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,13 @@ namespace Farmacia.Win
 
 		private void saludo_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Hola"); 
+			var producto = new ProductosBL();
+			var listaProductos = producto.ObtenerProducto();
+
+			foreach (var prod in listaProductos)
+			{
+				MessageBox.Show(prod.description);
+			}
 		}
 	}
 }
