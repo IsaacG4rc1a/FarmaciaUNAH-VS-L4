@@ -20,17 +20,17 @@ namespace Farmacia.BL
 		public DateTime expirationDate { get; set; }
 		//Existencias
 		public int stock { get; set; }
-		//Llave forane con tabla Categoria
-		public int cateId { get; set; }
-		public Category Categoria { get; set; }
+		////Llave forane con tabla Categoria
+		//public int cateId { get; set; }
+		//public Category Categoria { get; set; }
 
-		//Llave forane con tabla Presentación
-		public int presentId { get; set; }
-		public Presentation Presentacion { get; set; }
+		////Llave forane con tabla Presentación
+		//public int presentId { get; set; }
+		//public Presentation Presentacion { get; set; }
 
-		//Llave forane con tabla Proveedor
-		public int provId { get; set; }
-		public Provider Proveedor { get; set; }
+		////Llave forane con tabla Proveedor
+		//public int provId { get; set; }
+		//public Provider Proveedor { get; set; }
 
 		//Campo de inactivo y activo
 		public bool Active { get; set; }

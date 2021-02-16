@@ -16,17 +16,9 @@ namespace Farmacia.Win
 		public Form1()
 		{
 			InitializeComponent();
-		}
-
-		private void saludo_Click(object sender, EventArgs e)
-		{
 			var producto = new ProductosBL();
 			var listaProductos = producto.ObtenerProducto();
-
-			foreach (var prod in listaProductos)
-			{
-				MessageBox.Show(prod.description);
-			}
+			_listProductsBindingSource.DataSource = listaProductos;
 		}
 	}
 }

@@ -5,11 +5,39 @@
 }
 
 <h2>Productos</h2>
-@foreach (var prod in Model)
-{
-	<p>@prod.description</p>
-}
-<table>
+<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>
+				Codigo
+			</th>
+			<th>
+				Producto
+			</th>
+			<th>
+				Precio de compra
+			</th>
+			<th>
+				Precio de venta
+			</th>
+			<th>
+				Existencias
+			</th>
+			<th>
+				Fecha de vencimiento
+			</th>
+			<th>
+				Categoria
+			</th>
+			<th>
+				Proveedor
+			</th>
+			<th>
+				Presentacion
+			</th>
+		</tr>
+	</thead>
+	
 	@foreach (var item in Model)
 	{
 		<tr>
