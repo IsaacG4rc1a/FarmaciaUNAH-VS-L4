@@ -9,12 +9,15 @@ namespace Farmacia.WebAdmin.Controllers
 {
     public class ProductosController : Controller
     {
+		ProductosBL _productoBL;
+		public ProductosController()
+		{
+			_productoBL = new ProductosBL();
+		}
         // GET: Productos
         public ActionResult Index()
         {
-
-			var productos = new ProductosBL();
-			var listaProductos = productos.ObtenerProducto();
+			var listaProductos = _productoBL.ObtenerProducto();
 
 			return View(listaProductos);
         }
