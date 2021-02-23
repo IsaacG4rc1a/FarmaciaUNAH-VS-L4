@@ -13,11 +13,21 @@ namespace Farmacia.BL
 		public ProductosBL()
 		{
 			_context = new Context();
+			_listProducts = new List<Product>();
 		}
 		public List<Product> ObtenerProducto()
 		{
 			_listProducts = _context.Productos.ToList();
 			return _listProducts;
+		}
+
+		public void GuardarProducto(Product producto)
+		{
+			if (producto.productId == 0)
+			{
+				_context.Productos.Add(producto);
+			}
+			_context.SaveChanges();
 		}
 	}
 }

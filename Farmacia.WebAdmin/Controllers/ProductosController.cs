@@ -21,5 +21,19 @@ namespace Farmacia.WebAdmin.Controllers
 
 			return View(listaProductos);
         }
-    }
+		//Metodo de guardar producto
+		public ActionResult Crear()
+		{
+			var nuevoProducto = new Product();
+
+			return View(nuevoProducto);
+		}
+
+		[HttpPost]
+		public ActionResult Crear(Product Producto)
+		{
+			_productoBL.GuardarProducto(Producto);
+			return RedirectToAction("Index");
+		}
+	}
 }
